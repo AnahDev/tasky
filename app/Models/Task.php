@@ -15,6 +15,12 @@ class Task extends Model
         'is_completed',
     ];
 
+    protected $casts = [
+        'is_completed' => 'boolean',
+    ];
+
+
+
     //Relacion con el modelo User (una tarea pertenece a un usuario) 
     public function user(): BelongsTo
     {
